@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Data Safety – FoodMetric</title>
+<style>body{font-family:system-ui,sans-serif;max-width:760px;margin:40px auto;padding:0 20px;line-height:1.6;color:#111}table{border-collapse:collapse;width:100%}td,th{border:1px solid #ccc;padding:8px;text-align:left}</style>
+</head><body>
+<h1>Data Safety – FoodMetric (<code>com.foodmetric.app</code>)</h1>
+<table><tr><th>Data</th><th>Purpose</th><th>Notes</th></tr>
+<tr><td>Email (account)</td><td>App functionality</td><td>Required, encrypted, deletable</td></tr>
+<tr><td>Health info: analyses, goals</td><td>App functionality</td><td>Encrypted, deletable</td></tr>
+<tr><td>Advertising ID (AdMob)</td><td>Advertising</td><td>Encrypted, OS-resettable</td></tr></table>
+<p><strong>Not collected:</strong> photos (in-memory base64 only), precise location, contacts.</p>
+<p><strong>Sharing:</strong> processors only – Supabase (auth/db), NVIDIA + OpenRouter (inference), Google AdMob (ads). No sale.</p>
+<p><strong>Security:</strong> TLS in transit, encrypted at rest, SecureStore session, RLS <code>auth.uid()=user_id</code>.</p>
+<p><strong>Deletion:</strong> Profile → Delete account/data, or support@foodmetric.app. UMP consent reset in Profile.</p>
+<p><strong>Permissions:</strong> CAMERA (scan), READ_MEDIA_IMAGES (gallery pick), AD_ID (ads).</p>
+<p><a href="index.html">← Back</a></p>
+</body></html>
